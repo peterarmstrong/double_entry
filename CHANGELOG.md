@@ -27,10 +27,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     )
     ```
 
-- Allow partner account to be specified for aggregates.
-
-- Allow filtering aggregates by multiple metadata key/value pairs.
-
 - Add index on the `double_entry_line_checks` table. This covers the query to
   obtain the last line check.
 
@@ -49,16 +45,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Implement `DoubleEntry::Transfer::Set` and `DoubleEntry::Account::Set` with
   `Hash`es rather than `Array`s for performance.
 
-- Reporting API now uses keyword arguments. Note these reporting classes are
-  marked API private: their interface is not considered stable.
-  - `DoubleEntry::Reporting::aggregate`
-  - `DoubleEntry::Reporting::aggregate_array`
-  - `DoubleEntry::Reporting::Aggregate::new`
-  - `DoubleEntry::Reporting::Aggregate::formatted_amount`
-  - `DoubleEntry::Reporting::AggregateArray::new`
-  - `DoubleEntry::Reporting::LineAggregateFilter::new`
-
 ### Removed
+
+- Reporting API has now been moved to a separate gem
+  [`double_entry-reporting`](https://github.com/envato/double_entry-reporting).
 
 - Removed support for Ruby 1.9, 2.0, 2.1 and 2.2.
 
